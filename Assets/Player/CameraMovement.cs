@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
             throw new Exception("GameObject 'MapBackground' not set.");
         }
 
-        if (!TryGetComponent<Camera>(out var cam))
+        if (!TryGetComponent<Camera>(out var camera))
         {
             throw new Exception("Camera component not found.");
         }
@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour
             throw new Exception("'SpriteRenderer' not found.");
         }
 
-        var halfFrustumWidth = cam.orthographicSize * cam.aspect;
+        var halfFrustumWidth = camera.orthographicSize * camera.aspect;
         var backgroundHalfSizeX = spriteRenderer.bounds.size.x / 2.0f;
         var backgroundPositionX = MapBackground.transform.position.x;
 
@@ -40,8 +40,8 @@ public class CameraMovement : MonoBehaviour
         var delta = Speed * Time.deltaTime * x;
 
         var position = transform.position + new Vector3(delta, 0.0f, 0.0f);
-
         position.x = Mathf.Clamp(position.x, min, max);
+        
         transform.position = position;
     }
 }

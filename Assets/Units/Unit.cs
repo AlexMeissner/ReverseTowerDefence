@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public int health = 5;
     public float movementSpeed = 1.0f;
 
     private GameObject enemyBase;
@@ -29,6 +30,11 @@ public class Unit : MonoBehaviour
     }
 
     void MoveToEnemyHealth()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
 
     }

@@ -36,6 +36,11 @@ public class Unit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.GetComponent<Tower>() != null)
+        {
+            var renderer = GetComponent<SpriteRenderer>();
+            renderer.enabled = false;
+            enabled = false;
+        }
     }
 }

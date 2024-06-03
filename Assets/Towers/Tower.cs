@@ -19,18 +19,12 @@ public class Tower : MonoBehaviour
             unit.transform.Rotate(0.0f, 0.0f, 0.5f);
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var unit = other.gameObject.GetComponent<Unit>();
-        unit.movementSpeed *= -1.0f;
-
-        health -= unit.health;
-
-        if (health <= 0)
+        if (other.gameObject.GetComponent<Unit>() is Unit unit)
         {
-            var renderer = GetComponent<SpriteRenderer>();
-            renderer.color = Color.red;
+            Destroy(unit.gameObject);
         }
     }
 }

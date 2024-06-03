@@ -29,18 +29,16 @@ public class Unit : MonoBehaviour
         transform.position = position;
     }
 
-    void MoveToEnemyHealth()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Tower>() != null)
+        if (other.GetComponent<Tower>() is Tower tower)
         {
-            var renderer = GetComponent<SpriteRenderer>();
-            renderer.enabled = false;
-            enabled = false;
+            tower.health -= health;
+
+            if (tower.health <= 0)
+            {
+                Destroy(tower.gameObject);
+            }
         }
     }
 }

@@ -71,6 +71,11 @@
     <Compile Include="Assets\Projectiles\Projectile.cs" />
     <Compile Include="Assets\Towers\TowerManager.cs" />
     <Compile Include="Assets\Towers\Tower.cs" />
+    <Compile Include="Assets\UserInterface\BaseUI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UserInterface\BaseUI.uss" />
+    <None Include="Assets\UserInterface\BaseUI.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

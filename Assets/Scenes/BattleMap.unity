@@ -411,8 +411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce80a1ad2d99dc4ea29af9288289a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 2900594723439711125, guid: e016550dd68850a40bf52d04eaf110d6, type: 3}
   health: 10
   level: 1
+  range: 100
+  rechargeTime: 1
 --- !u!50 &416032602
 Rigidbody2D:
   serializedVersion: 4

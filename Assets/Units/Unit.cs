@@ -40,5 +40,9 @@ public class Unit : MonoBehaviour
                 Destroy(tower.gameObject);
             }
         }
+        else if (other.GetComponent<Projectile>() is Projectile projectile)
+        {
+            Destroy(projectile.gameObject);
+        }
     }
 }

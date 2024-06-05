@@ -68,6 +68,7 @@
     <Compile Include="Assets\Units\UnitSpawner.cs" />
     <Compile Include="Assets\Units\Unit.cs" />
     <Compile Include="Assets\Player\CameraMovement.cs" />
+    <Compile Include="Assets\Projectiles\Projectile.cs" />
     <Compile Include="Assets\Towers\TowerManager.cs" />
     <Compile Include="Assets\Towers\Tower.cs" />
   </ItemGroup>
